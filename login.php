@@ -5,7 +5,7 @@ if (isset($_POST['username']) and isset($_POST['password'])){
 $username = $_POST['username'];
 $password = $_POST['password'];
 $result = mysql_query("SELECT * FROM `user` WHERE username='$username' and password='$password'");
-echo $count = mysql_num_rows($result); 
+$count = mysql_num_rows($result); 
 
 if ($count == 1){
 $_SESSION['username'] = $username;
